@@ -179,7 +179,6 @@ button:hover{
 }
 
 button:active{
-
     transform:scale(.98);
 
 }
@@ -257,5 +256,50 @@ textarea{
         font-size:28px;
 
     }
+
+}
+.file-picker{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-top:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.file-button{
+
+    background:#4c7cff;
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.file-button:hover{
+
+    background:#6590ff;
+
+}
+
+#fileName{
+
+    color:#9ea8c4;
+
+    font-size:15px;
 
 }
