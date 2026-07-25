@@ -3,6 +3,7 @@ const itemName = document.getElementById("itemName");
 const identifier = document.getElementById("identifier");
 
 const textureFile = document.getElementById("textureFile");
+const fileName = document.getElementById("fileName");
 
 const previewImage = document.getElementById("previewImage");
 const previewText = document.getElementById("previewText");
