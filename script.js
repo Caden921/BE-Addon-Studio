@@ -130,12 +130,12 @@ addonButton.onclick=async()=>{
 
     }
 
-    if(identifier.value===""){
+if(identifier.value.trim()===""){
 
-        log("❌ Identifier required");
-        return;
+    log("❌ Identifier required");
+    return;
 
-    }
+}
 
     if(textureData===null){
 
@@ -341,10 +341,10 @@ addonButton.onclick=async()=>{
 
         "texts/en_US.lang",
 
-        "item." +
-        identifier.value.replace(":",".") +
-        ".name=" +
-        itemName.value
+        "item.beas." +
+identifier.value.trim() +
+".name=" +
+itemName.value
 
     );
 
