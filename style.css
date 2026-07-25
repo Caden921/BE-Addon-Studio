@@ -1,46 +1,490 @@
-/* Identifier */
-.identifier-input {
-    display: flex;
-    align-items: stretch;
-    width: 100%;
-    height: 48px;
-    background: #38435b;
-    border-radius: 10px;
-    overflow: hidden;
+/* ===========================
+   BE Addon Studio v0.2
+   Part 1
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.identifier-input span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 16px;
-    background: #4a5673;
-    color: #ffffff;
-    font-family: monospace;
-    font-size: 15px;
-    white-space: nowrap;
-    user-select: none;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#1f2430;
+    color:#ffffff;
+    display:flex;
+    justify-content:center;
+    padding:40px 20px;
 }
 
-.identifier-input input {
-    flex: 1;
-    width: auto !important;
-    min-width: 0;
-
-    margin: 0;
-    padding: 0 16px;
-
-    border: none;
-    outline: none;
-    box-shadow: none;
-
-    background: transparent !important;
-    color: #ffffff;
-
-    font-size: 16px;
-    font-family: inherit;
+.container{
+    width:100%;
+    max-width:700px;
 }
 
-.identifier-input input::placeholder {
-    color: #9aa6bf;
+.card{
+    background:#2b3244;
+    border-radius:18px;
+    padding:28px;
+    box-shadow:0 12px 35px rgba(0,0,0,.35);
 }
+
+h1{
+    font-size:34px;
+    text-align:center;
+    margin-bottom:8px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#b6bfd2;
+    margin-bottom:28px;
+}
+
+label{
+    display:block;
+    margin-top:18px;
+    margin-bottom:8px;
+    font-size:15px;
+    font-weight:600;
+    color:#d8deed;
+}
+
+/* ===========================
+   INPUT
+=========================== */
+
+input[type=text],
+input[type=number],
+textarea,
+select{
+
+    width:100%;
+    height:48px;
+
+    background:#38435b;
+
+    border:none;
+    border-radius:10px;
+
+    color:white;
+
+    font-size:15px;
+
+    padding:0 15px;
+
+    transition:.2s;
+}
+
+textarea{
+    height:170px;
+    padding:14px;
+    resize:vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    outline:none;
+
+    box-shadow:
+    0 0 0 2px #4e84ff;
+}
+
+/* ===========================
+   IDENTIFIER
+=========================== */
+
+.identifier-input{
+
+    display:flex;
+
+    width:100%;
+
+    height:48px;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    background:#38435b;
+}
+
+.identifier-input span{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:0 16px;
+
+    background:#4a5673;
+
+    color:white;
+
+    font-family:monospace;
+
+    user-select:none;
+}
+
+.identifier-input input{
+
+    flex:1;
+
+    border:none;
+
+    background:transparent;
+
+    color:white;
+
+    padding:0 16px;
+
+    font-size:15px;
+}
+
+.identifier-input input:focus{
+
+    box-shadow:none;
+}
+
+/* ===========================
+   SELECT
+=========================== */
+
+select{
+
+    appearance:none;
+
+    cursor:pointer;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button{
+
+    width:100%;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    margin-top:18px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:#4e84ff;
+
+    transition:.2s;
+}
+
+button:hover{
+
+    background:#6998ff;
+}
+
+button:active{
+
+    transform:scale(.98);
+}
+
+/* ===========================
+   SMALL BUTTON
+=========================== */
+
+.button-row{
+
+    display:flex;
+
+    gap:10px;
+}
+
+.button-row button{
+
+    flex:1;
+}
+
+/* ===========================
+   IMAGE UPLOAD
+=========================== */
+
+.upload-box{
+
+    margin-top:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+.upload-box input{
+
+    display:none;
+}
+
+.upload-btn{
+
+    padding:12px 18px;
+
+    border-radius:10px;
+
+    background:#465270;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.upload-btn:hover{
+
+    background:#5a688a;
+}
+
+.preview{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:12px;
+
+    background:#38435b;
+
+    object-fit:cover;
+
+    border:2px solid rgba(255,255,255,.08);
+}
+/* ===========================
+   OUTPUT
+=========================== */
+
+.output-box{
+
+    margin-top:20px;
+}
+
+.output-box textarea{
+
+    background:#222938;
+
+    color:#7fffb0;
+
+    font-family:Consolas, monospace;
+
+    font-size:13px;
+
+    line-height:1.5;
+}
+
+/* ===========================
+   LOG
+=========================== */
+
+.log{
+
+    margin-top:18px;
+
+    background:#222938;
+
+    border-radius:10px;
+
+    padding:15px;
+
+    font-family:Consolas, monospace;
+
+    font-size:13px;
+
+    color:#d6ddeb;
+
+    max-height:180px;
+
+    overflow-y:auto;
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+}
+
+/* ===========================
+   DIVIDER
+=========================== */
+
+hr{
+
+    margin:30px 0;
+
+    border:none;
+
+    height:1px;
+
+    background:rgba(255,255,255,.08);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer{
+
+    margin-top:35px;
+
+    text-align:center;
+
+    color:#9ca6ba;
+
+    font-size:13px;
+
+    line-height:1.7;
+}
+
+.footer strong{
+
+    color:white;
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+
+    color:#69a8ff;
+
+    text-decoration:none;
+
+    transition:.2s;
+}
+
+a:hover{
+
+    color:#8ebeff;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#232938;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#55627f;
+
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#6b7b9f;
+}
+
+/* ===========================
+   CARD ANIMATION
+=========================== */
+
+.card{
+
+    animation:fadeUp .35s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+/* ===========================
+   HOVER EFFECT
+=========================== */
+
+input:hover,
+select:hover,
+textarea:hover{
+
+    background:#404d68;
+}
+
+.preview:hover{
+
+    transform:scale(1.04);
+
+    transition:.2s;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:700px){
+
+    body{
+
+        padding:18px;
+    }
+
+    .card{
+
+        padding:20px;
+    }
+
+    h1{
+
+        font-size:28px;
+    }
+
+    .button-row{
+
+        flex-direction:column;
+    }
+
+    .preview{
+
+        width:60px;
+
+        height:60px;
+    }
+
+    .identifier-input span{
+
+        padding:0 14px;
+    }
+
+}
+
+/* ===========================
+   END
+=========================== */
