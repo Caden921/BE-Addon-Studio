@@ -1,13 +1,208 @@
-.subtitle{
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    margin-top:-10px;
-    margin-bottom:30px;
+body{
+
+    background:#151b2d;
+
+    color:#ffffff;
+
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+
+}
+
+header{
+
+    padding:50px 20px 35px;
 
     text-align:center;
 
-    color:#8d95a5;
+    border-bottom:1px solid #2b3248;
 
-    font-size:18px;
+}
+
+header h1{
+
+    font-size:52px;
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    color:#9ea8c4;
+
+    font-size:20px;
+
+}
+
+main{
+
+    max-width:950px;
+
+    margin:40px auto;
+
+    padding:0 20px;
+
+}
+
+.card{
+
+    background:#252d40;
+
+    border:1px solid #3a455f;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    margin-bottom:24px;
+
+}
+
+.card h2{
+
+    margin-bottom:20px;
+
+    font-size:34px;
+
+}
+
+label{
+
+    display:block;
+
+    margin-top:18px;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+input[type=text]{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#38435b;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+input[type=file]{
+
+    width:100%;
+
+    padding:12px;
+
+    border:2px dashed #55617f;
+
+    border-radius:12px;
+
+    background:#1d2436;
+
+}
+
+.preview{
+
+    margin-top:20px;
+
+    text-align:center;
+
+}
+
+#previewImage{
+
+    width:128px;
+
+    height:128px;
+
+    image-rendering:pixelated;
+
+    display:none;
+
+    margin:auto;
+
+}
+
+#previewText{
+
+    margin-top:15px;
+
+    color:#a6afc5;
+
+}
+
+button{
+
+    width:100%;
+
+    margin-top:12px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#4c7cff;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+button:hover{
+
+    background:#6590ff;
+
+}
+
+button:active{
+
+    transform:scale(.98);
+
+}
+
+textarea{
+
+    width:100%;
+
+    height:220px;
+
+    resize:none;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:16px;
+
+    background:#1d2436;
+
+    color:white;
+
+    font-size:15px;
 
 }
 
@@ -15,21 +210,19 @@
 
     margin-top:60px;
 
-    padding:28px;
+    padding:35px;
+
+    border-top:1px solid #2b3248;
 
     text-align:center;
-
-    border-top:1px solid #2d3344;
 
 }
 
 .wm-title{
 
-    font-size:22px;
+    font-size:24px;
 
-    font-weight:bold;
-
-    color:white;
+    font-weight:700;
 
     margin-bottom:8px;
 
@@ -37,9 +230,7 @@
 
 .wm-sub{
 
-    color:#9a9a9a;
-
-    font-size:14px;
+    color:#9ea8c4;
 
     margin-bottom:6px;
 
@@ -47,8 +238,24 @@
 
 .wm-version{
 
-    color:#666;
+    color:#6f7892;
 
-    font-size:12px;
+    font-size:13px;
+
+}
+
+@media(max-width:700px){
+
+    header h1{
+
+        font-size:38px;
+
+    }
+
+    .card h2{
+
+        font-size:28px;
+
+    }
 
 }
