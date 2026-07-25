@@ -273,7 +273,7 @@ addonButton.onclick=async()=>{
 
             "description": {
 
-                "identifier": identifier.value,
+                "identifier": "beas:" + identifier.value.trim(),
 
                 "menu_category": {
 
