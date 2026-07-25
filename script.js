@@ -290,6 +290,8 @@ addonButton.onclick=async()=>{
                 "minecraft:display_name": {
 
                     "value": itemName.value
+                },
+                "minecraft:max_stack_size": Number(maxStackSize.value),
 
                 }
 
