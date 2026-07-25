@@ -262,25 +262,39 @@ textarea{
 
     display:flex;
 
+    flex-direction:column;
+
     align-items:center;
 
-    gap:16px;
+    justify-content:center;
 
-    margin-top:18px;
+    gap:14px;
 
-    flex-wrap:wrap;
+    margin:25px 0;
 
 }
 
 .file-button{
 
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:100%;
+
+    max-width:420px;
+
+    height:60px;
+
     background:#4c7cff;
 
     color:white;
 
-    padding:12px 22px;
+    border-radius:14px;
 
-    border-radius:10px;
+    font-size:18px;
 
     font-weight:600;
 
@@ -288,11 +302,15 @@ textarea{
 
     transition:.2s;
 
+    user-select:none;
+
 }
 
 .file-button:hover{
 
     background:#6590ff;
+
+    transform:translateY(-2px);
 
 }
 
@@ -301,5 +319,7 @@ textarea{
     color:#9ea8c4;
 
     font-size:15px;
+
+    text-align:center;
 
 }
