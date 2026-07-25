@@ -1,6 +1,7 @@
 const packName = document.getElementById("packName");
 const itemName = document.getElementById("itemName");
 const identifier = document.getElementById("identifier");
+const maxStackSize = document.getElementById("maxStackSize");
 
 const textureFile = document.getElementById("textureFile");
 const fileName = document.getElementById("fileName");
