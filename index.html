@@ -52,10 +52,27 @@
 
         <h2>Item Texture</h2>
 
-        <input
-            type="file"
-            id="textureFile"
-            accept=".png,image/png">
+<input
+    type="file"
+    id="textureFile"
+    accept=".png,image/png"
+    hidden>
+
+<div class="file-picker">
+
+    <label
+        for="textureFile"
+        class="file-button">
+
+        Select PNG Texture
+
+    </label>
+
+    <span id="fileName">
+        No file selected
+    </span>
+
+</div>
 
         <div class="preview">
 
