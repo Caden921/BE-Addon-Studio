@@ -1,8 +1,3 @@
-/* ===========================
-   BE Addon Studio v0.2
-   Part 1
-=========================== */
-
 *{
     margin:0;
     padding:0;
@@ -10,481 +5,384 @@
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#1f2430;
+
+    background:#151b2d;
+
     color:#ffffff;
-    display:flex;
-    justify-content:center;
-    padding:40px 20px;
+
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+
 }
 
-.container{
-    width:100%;
-    max-width:700px;
-}
+header{
 
-.card{
-    background:#2b3244;
-    border-radius:18px;
-    padding:28px;
-    box-shadow:0 12px 35px rgba(0,0,0,.35);
-}
+    padding:50px 20px 35px;
 
-h1{
-    font-size:34px;
     text-align:center;
-    margin-bottom:8px;
+
+    border-bottom:1px solid #2b3248;
+
+}
+
+header h1{
+
+    font-size:52px;
+
+    margin-bottom:10px;
+
 }
 
 .subtitle{
-    text-align:center;
-    color:#b6bfd2;
-    margin-bottom:28px;
+
+    color:#9ea8c4;
+
+    font-size:20px;
+
+}
+
+main{
+
+    max-width:950px;
+
+    margin:40px auto;
+
+    padding:0 20px;
+
+}
+
+.card{
+
+    background:#252d40;
+
+    border:1px solid #3a455f;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    margin-bottom:24px;
+
+}
+
+.card h2{
+
+    margin-bottom:20px;
+
+    font-size:34px;
+
 }
 
 label{
+
     display:block;
+
     margin-top:18px;
+
     margin-bottom:8px;
-    font-size:15px;
+
     font-weight:600;
-    color:#d8deed;
+
 }
 
-/* ===========================
-   INPUT
-=========================== */
-
-input[type=text],
-input[type=number],
-textarea,
-select{
+input[type=text]{
 
     width:100%;
-    height:48px;
 
-    background:#38435b;
-
-    border:none;
-    border-radius:10px;
-
-    color:white;
-
-    font-size:15px;
-
-    padding:0 15px;
-
-    transition:.2s;
-}
-
-textarea{
-    height:170px;
     padding:14px;
-    resize:vertical;
-}
-
-input:focus,
-textarea:focus,
-select:focus{
-
-    outline:none;
-
-    box-shadow:
-    0 0 0 2px #4e84ff;
-}
-
-/* ===========================
-   IDENTIFIER
-=========================== */
-
-.identifier-input{
-
-    display:flex;
-
-    width:100%;
-
-    height:48px;
-
-    border-radius:10px;
-
-    overflow:hidden;
-
-    background:#38435b;
-}
-
-.identifier-input span{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:0 16px;
-
-    background:#4a5673;
-
-    color:white;
-
-    font-family:monospace;
-
-    user-select:none;
-}
-
-.identifier-input input{
-
-    flex:1;
 
     border:none;
 
-    background:transparent;
+    border-radius:10px;
+
+    background:#38435b;
 
     color:white;
 
-    padding:0 16px;
+    font-size:16px;
 
-    font-size:15px;
 }
 
-.identifier-input input:focus{
+input[type=file]{
 
-    box-shadow:none;
+    width:100%;
+
+    padding:12px;
+
+    border:2px dashed #55617f;
+
+    border-radius:12px;
+
+    background:#1d2436;
+
 }
 
-/* ===========================
-   SELECT
-=========================== */
+.preview{
 
-select{
+    margin-top:20px;
 
-    appearance:none;
+    text-align:center;
 
-    cursor:pointer;
 }
 
-/* ===========================
-   BUTTON
-=========================== */
+#previewImage{
+
+    width:128px;
+
+    height:128px;
+
+    image-rendering:pixelated;
+
+    display:none;
+
+    margin:auto;
+
+}
+
+#previewText{
+
+    margin-top:15px;
+
+    color:#a6afc5;
+
+}
 
 button{
 
     width:100%;
 
-    height:50px;
+    margin-top:12px;
+
+    padding:16px;
 
     border:none;
 
-    border-radius:10px;
+    border-radius:12px;
 
-    cursor:pointer;
-
-    margin-top:18px;
-
-    font-size:16px;
-
-    font-weight:bold;
+    background:#4c7cff;
 
     color:white;
 
-    background:#4e84ff;
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
 
     transition:.2s;
+
 }
 
 button:hover{
 
-    background:#6998ff;
+    background:#6590ff;
+
 }
 
 button:active{
-
     transform:scale(.98);
+
 }
 
-/* ===========================
-   SMALL BUTTON
-=========================== */
+textarea{
 
-.button-row{
+    width:100%;
+
+    height:120px;
+
+    resize:none;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:16px;
+
+    background:#1d2436;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.watermark{
+
+    margin-top:60px;
+
+    padding:35px;
+
+    border-top:1px solid #2b3248;
+
+    text-align:center;
+
+}
+
+.wm-title{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+.wm-sub{
+
+    color:#9ea8c4;
+
+    margin-bottom:6px;
+
+}
+
+.wm-version{
+
+    color:#6f7892;
+
+    font-size:13px;
+
+}
+
+@media(max-width:700px){
+
+    header h1{
+
+        font-size:38px;
+
+    }
+
+    .card h2{
+
+        font-size:28px;
+
+    }
+
+}
+.file-picker{
 
     display:flex;
 
-    gap:10px;
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:14px;
+
+    margin:25px 0;
+
 }
 
-.button-row button{
-
-    flex:1;
-}
-
-/* ===========================
-   IMAGE UPLOAD
-=========================== */
-
-.upload-box{
-
-    margin-top:15px;
+.file-button{
 
     display:flex;
 
     align-items:center;
 
-    gap:12px;
-}
+    justify-content:center;
 
-.upload-box input{
+    width:100%;
 
-    display:none;
-}
+    max-width:500px;
 
-.upload-btn{
+    height:64px;
 
-    padding:12px 18px;
+    background:#4c7cff;
 
-    border-radius:10px;
+    color:white;
 
-    background:#465270;
+    border-radius:14px;
+
+    font-size:18px;
+
+    font-weight:600;
 
     cursor:pointer;
 
     transition:.2s;
+
+    user-select:none;
+
 }
 
-.upload-btn:hover{
+.file-button:hover{
 
-    background:#5a688a;
+    background:#6590ff;
+
+    transform:translateY(-2px);
+
 }
 
-.preview{
+#fileName{
 
-    width:72px;
-
-    height:72px;
-
-    border-radius:12px;
-
-    background:#38435b;
-
-    object-fit:cover;
-
-    border:2px solid rgba(255,255,255,.08);
-}
-/* ===========================
-   OUTPUT
-=========================== */
-
-.output-box{
-
-    margin-top:20px;
-}
-
-.output-box textarea{
-
-    background:#222938;
-
-    color:#7fffb0;
-
-    font-family:Consolas, monospace;
-
-    font-size:13px;
-
-    line-height:1.5;
-}
-
-/* ===========================
-   LOG
-=========================== */
-
-.log{
-
-    margin-top:18px;
-
-    background:#222938;
-
-    border-radius:10px;
-
-    padding:15px;
-
-    font-family:Consolas, monospace;
-
-    font-size:13px;
-
-    color:#d6ddeb;
-
-    max-height:180px;
-
-    overflow-y:auto;
-
-    white-space:pre-wrap;
-
-    word-break:break-word;
-}
-
-/* ===========================
-   DIVIDER
-=========================== */
-
-hr{
-
-    margin:30px 0;
-
-    border:none;
-
-    height:1px;
-
-    background:rgba(255,255,255,.08);
-}
-
-/* ===========================
-   FOOTER
-=========================== */
-
-.footer{
-
-    margin-top:35px;
+    width:100%;
 
     text-align:center;
 
-    color:#9ca6ba;
+    color:#9ea8c4;
 
-    font-size:13px;
+    font-size:15px;
 
-    line-height:1.7;
 }
+.output-card{
 
-.footer strong{
+    padding:22px;
 
-    color:white;
 }
+select{
 
-/* ===========================
-   LINKS
-=========================== */
+    width:100%;
 
-a{
+    padding:14px;
 
-    color:#69a8ff;
-
-    text-decoration:none;
-
-    transition:.2s;
-}
-
-a:hover{
-
-    color:#8ebeff;
-}
-
-/* ===========================
-   SCROLLBAR
-=========================== */
-
-::-webkit-scrollbar{
-
-    width:10px;
-}
-
-::-webkit-scrollbar-track{
-
-    background:#232938;
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:#55627f;
+    border:none;
 
     border-radius:10px;
-}
 
-::-webkit-scrollbar-thumb:hover{
+    background:#38435b;
 
-    background:#6b7b9f;
-}
+    color:white;
 
-/* ===========================
-   CARD ANIMATION
-=========================== */
+    font-size:16px;
 
-.card{
-
-    animation:fadeUp .35s ease;
-}
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(12px);
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-    }
-}
-
-/* ===========================
-   HOVER EFFECT
-=========================== */
-
-input:hover,
-select:hover,
-textarea:hover{
-
-    background:#404d68;
-}
-
-.preview:hover{
-
-    transform:scale(1.04);
-
-    transition:.2s;
-}
-
-/* ===========================
-   MOBILE
-=========================== */
-
-@media(max-width:700px){
-
-    body{
-
-        padding:18px;
-    }
-
-    .card{
-
-        padding:20px;
-    }
-
-    h1{
-
-        font-size:28px;
-    }
-
-    .button-row{
-
-        flex-direction:column;
-    }
-
-    .preview{
-
-        width:60px;
-
-        height:60px;
-    }
-
-    .identifier-input span{
-
-        padding:0 14px;
-    }
+    cursor:pointer;
 
 }
+.identifier-input {
+    display: grid;
+    grid-template-columns: 62px 1fr;
+    width: 100%;
+    height: 42px;
+    background: #38435b;
+    border-radius: 10px;
+    overflow: hidden;
+}
 
-/* ===========================
-   END
-=========================== */
+.identifier-input span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.08);
+    color: #d6dcef;
+    font-family: monospace;
+    font-size: 15px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    user-select: none;
+}
+
+.identifier-input input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    padding: 0 14px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.identifier-input input::placeholder {
+    color: #9aa3b5;
+}
