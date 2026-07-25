@@ -68,7 +68,7 @@ textureFile.addEventListener("change",()=>{
     
     fileName.textContent = file.name;
 
-    textureName=file.name.replace(".png","");
+    textureName = file.name.replace(/\.[^/.]+$/, "");
 
     const reader=new FileReader();
 
