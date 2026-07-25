@@ -261,3 +261,141 @@ addonButton.onclick=async()=>{
     const langFolder=
 
         RP.folder("texts");
+            const itemJson = {
+
+        "format_version": "1.21.0",
+
+        "minecraft:item": {
+
+            "description": {
+
+                "identifier": identifier.value,
+
+                "menu_category": {
+
+                    "category": "items"
+
+                }
+
+            },
+
+            "components": {
+
+                "minecraft:icon": textureName,
+
+                "minecraft:display_name": {
+
+                    "value": itemName.value
+
+                }
+
+            }
+
+        }
+
+    };
+
+    itemFolder.file(
+
+        textureName + ".json",
+
+        JSON.stringify(itemJson, null, 4)
+
+    );
+
+    log("✔ item.json");
+
+    const itemTexture = {
+
+        "resource_pack_name": "vanilla",
+
+        "texture_name": "atlas.items",
+
+        "texture_data": {}
+
+    };
+
+    itemTexture.texture_data[textureName] = {
+
+        "textures": "textures/items/" + textureName
+
+    };
+
+    RP.file(
+
+        "textures/item_texture.json",
+
+        JSON.stringify(itemTexture, null, 4)
+
+    );
+
+    log("✔ item_texture.json");
+
+    RP.file(
+
+        "texts/en_US.lang",
+
+        "item." +
+        identifier.value.replace(":",".") +
+        ".name=" +
+        itemName.value
+
+    );
+
+    RP.file(
+
+        "texts/languages.json",
+
+        JSON.stringify([
+            "en_US"
+        ], null, 4)
+
+    );
+
+    log("✔ Language Files");
+
+    const base64 = textureData.split(",")[1];
+
+    textureFolder.file(
+
+        textureName + ".png",
+
+        base64,
+
+        {
+
+            base64: true
+
+        }
+
+    );
+
+    log("✔ Texture");
+
+    const addonBlob = await zip.generateAsync({
+
+        type:"blob"
+
+    });
+
+    const url = URL.createObjectURL(addonBlob);
+
+    const a = document.createElement("a");
+
+    a.href = url;
+
+    a.download = packName.value + ".mcaddon";
+
+    document.body.appendChild(a);
+
+    a.click();
+
+    a.remove();
+
+    URL.revokeObjectURL(url);
+
+    log("");
+
+    log("✅ Add-on Created Successfully");
+
+};
