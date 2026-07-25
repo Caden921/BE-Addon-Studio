@@ -65,6 +65,8 @@ textureFile.addEventListener("change",()=>{
     const file=textureFile.files[0];
 
     if(!file)return;
+    
+    fileName.textContent = file.name;
 
     textureName=file.name.replace(".png","");
 
