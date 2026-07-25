@@ -1,4 +1,4 @@
-# PA-Addon-Studio
+
 # PA Addon Studio
 
 Minecraft Bedrock Addon Creator for iPad.
